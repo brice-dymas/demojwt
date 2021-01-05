@@ -23,31 +23,31 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User save(User user) {
-        return null;
+        return userRepository.save(user);
     }
 
     @Override
     public User update(User user) {
-        return null;
+        return userRepository.save(user);
     }
 
     @Override
     public User findById(Long id) {
-        return null;
+        return userRepository.findById(id).orElseThrow();
     }
 
     @Override
     public User findByUsername(String username) {
-        return null;
+        return userRepository.findByUsername(username);
     }
 
     @Override
     public void deleteById(Long id) {
-
+        userRepository.deleteById(id);
     }
 
     @Override
     public List<User> findAll() {
-        return null;
+        return userRepository.findAll();
     }
 }
